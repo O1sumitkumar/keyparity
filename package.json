@@ -1,0 +1,32 @@
+{
+  "name": "keyparity",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "commander": "^15.1.0",
+    "picocolors": "^1.1.1"
+  },
+  "version": "0.0.0",
+  "description": "Check that every env var your code uses is in .env.example and GitHub Secrets. Reads names only, never values.",
+  "license": "MIT",
+  "bin": {
+    "keyparity": "src/index.ts"
+  },
+  "files": [
+    "src",
+    "!src/**/*.test.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keyparity/keyparity.git"
+  },
+  "homepage": "https://github.com/keyparity/keyparity#readme",
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "build": "bun build src/index.ts --compile --outfile dist/keyparity"
+  }
+}
